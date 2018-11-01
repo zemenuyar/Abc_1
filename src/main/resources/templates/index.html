@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="car : ${cars}">
+    <h2 th:text="$car.manfacture">
+        <h6 th:inline="text"> [[${car.type}</h6>
+        <ul>
+            <th:block th:each="movie : ${car.category}">
+                <li th:inline="text"></li>
+            </th:block>
+        </ul>
+    </h2>
+</div>
+</body>
+</html>
